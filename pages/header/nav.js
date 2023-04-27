@@ -1,7 +1,7 @@
 // ----------------- NAVBAR INSERT -----------------
 
-const navbarHtml = "/mcmd/pages/header/nav.html";
-const navbarCss = "/mcmd/pages/header/nav.css";
+const navbarHtml = "/pages/header/nav.html";
+const navbarCss = "/pages/header/nav.css";
 
 async function includeNavbar() {
       // Create a link element for the navbar CSS file
