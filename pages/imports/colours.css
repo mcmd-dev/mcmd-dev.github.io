@@ -1,0 +1,9 @@
+:root {
+    --primary_light: #2B838C;
+    --primary_dark: #0F2426;
+    --light: #EEEEEE;
+    --dark: #212121;
+    --background-hex: #121212;  
+    --background-rgba: rgba(18,18,18,1);
+    --notquitewhite: #F5F5F5;
+  }

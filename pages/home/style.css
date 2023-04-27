@@ -1,0 +1,97 @@
+@import url('/mcmd/pages/imports/colours.css');
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('https://fonts.gstatic.com/s/roboto/v27/KFOmCnqEu92Fr1Mu4mxM.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.intro {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom, rgba(0,0,0,0), var(--background-rgba)), url("/mcmd/img/Intro\ 1.png") center center/cover no-repeat fixed;
+}
+
+.intro h1 { /* For google's algorithm, an invisible h1 tag as the image is what says MCMD */
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 15em;
+  color: var(--notquitewhite);
+  opacity: 0;
+  animation: intro-logo 1s ease-out forwards;
+}
+
+.intro img {
+  -webkit-user-drag: none;
+  user-select: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  max-width: 40em;
+  height: auto;
+  opacity: 0;
+  filter: hue-rotate(180deg);
+  animation: intro-logo 1s ease-out forwards;
+  margin-bottom: 100em;
+}
+
+.intro p {
+  position: absolute;
+  top: 69vh;
+  left: 50%;
+  text-align: center;
+  font-family: 'Roboto', 'Poppins';
+  font-style: italic;
+  font-size: 1.5em;
+  color: var(--notquitewhite);
+  opacity: 0;
+  animation: intro-p 1s ease-out forwards;
+  animation-delay: 0.75s;
+}
+
+@keyframes intro-logo {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -40%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+  
+@keyframes intro-p {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -30%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+} 
+
+@media (max-width: 772px) {
+  .intro p {
+    top: 75vh;
+  }
+}
+
+.command_help {
+  height: 100vh;
+  background-color: var(--background-rgba);
+}
