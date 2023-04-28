@@ -1,12 +1,5 @@
 @import url('/src/imports/colours.css');
 
-@font-face {
-    font-family: 'Roboto';
-    src: url('https://fonts.gstatic.com/s/roboto/v27/KFOmCnqEu92Fr1Mu4mxM.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-}
-
 * {
     margin: 0;
     padding: 0;

@@ -42,17 +42,18 @@ const checkHamburger = setInterval(function() {
     dropdownMenu.classList.toggle('is-active');
   });
 
-  const mediaQuery = window.matchMedia('screen and (min-width: 786px)');
-  mediaQuery.addListener(function() {
-  if (dropdownMenu.classList.contains('dropdown')) {
-    dropdownMenu.classList.remove('dropdown');
-    dropdownMenu.classList.add('menu');
-  } else {
-    dropdownMenu.classList.add('dropdown');
-    dropdownMenu.classList.remove('menu');
-    hamburger.classList.remove('is-active');
-    dropdownMenu.classList.remove('is-active');
-  }
-});
+  const observer = new ResizeObserver(entries => {
+    entries.forEach(entry => {
+      if (getComputedStyle(hamburger).display === 'none') {
+        dropdownMenu.classList.add('menu');
+        dropdownMenu.classList.remove('dropdown');
+      } else {
+        dropdownMenu.classList.add('dropdown');
+        dropdownMenu.classList.remove('menu');
+      }
+    });
+  });
+  
+  observer.observe(document.body);
 }, 100);
 
