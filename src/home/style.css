@@ -1,4 +1,4 @@
-@import url('/mcmd/pages/imports/colours.css');
+@import url('/src/imports/colours.css');
 
 @font-face {
     font-family: 'Roboto';
@@ -24,7 +24,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(to bottom, rgba(0,0,0,0), var(--background-rgba)), url("/img/Intro\ 1.png") center center/cover no-repeat fixed;
+  background: linear-gradient(to bottom, rgba(0,0,0,0), var(--background-rgba)), url("/src/img/banner_storage.png") center center/cover no-repeat fixed;
 }
 
 .intro h1 { /* For google's algorithm, an invisible h1 tag as the image is what says MCMD */

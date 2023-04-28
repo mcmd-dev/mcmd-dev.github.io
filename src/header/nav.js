@@ -1,7 +1,7 @@
 // ----------------- NAVBAR INSERT -----------------
 
-const navbarHtml = "/src/pg/header/nav.html";
-const navbarCss = "/src/pg/header/nav.css";
+const navbarHtml = "/src/header/nav.html";
+const navbarCss = "/src/header/nav.css";
 
 async function includeNavbar() {
       // Create a link element for the navbar CSS file
