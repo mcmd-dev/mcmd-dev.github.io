@@ -5,17 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/src/img/icon/favicon.ico" type="image/x-icon">
-    <title>MCMD - Home</title>
-    <script src="/src/header/nav.js" defer></script>
     <link rel="stylesheet" href="/src/home/style.css">
+    <title>MCMD - Home</title>
     <script src="/src/imports/html_watermark.js" defer id="watermark-script"></script>
+    <script src="/src/imports/screen_size.js" defer></script>
+    <script src="/src/header/nav.js" defer></script>
+    <script src="/src/imports/common_meta.js" defer></script>
     <script src="/src/home/script.js" defer></script>
 </head>
 <body>
     <header id="navbar"></header>
 
-    <section class="intro">
-        <img src="/src/img/logo_laudaya_bloods.png" onerror="introImgH1Error()" onload="introImgH1Load()">
+    <section class="banner_storage">
+        <img src="/src/img/logo_laudaya_bloods.png" onerror="document.querySelector('.banner_storage h1').style.display = 'block'; this.style.display = 'none'" onload="document.querySelector('.banner_storage h1').style.display = 'none'; this.style.display = 'block'">
         <h1>MCMD</h1> <!-- For google's algorithm and if img fails to load -->
         <p>"The ultimate solution to all your Minecraft Command problems"</p>
     </section>

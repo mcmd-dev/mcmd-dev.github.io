@@ -32,10 +32,11 @@ let dropdownMenu = null
 const checkHamburger = setInterval(function() {
 
   const hamburger = document.querySelector('.hamburger');
-  const dropdownMenu = document.querySelector('.dropdown, .menu');
+  const dropdownMenu = document.querySelector('#dropdownMenu');
 
   if (!hamburger) {return;}
 
+  // Hamburger was clicked
   clearInterval(checkHamburger);
   hamburger.addEventListener('click', function() {
     hamburger.classList.toggle('is-active');
@@ -45,9 +46,13 @@ const checkHamburger = setInterval(function() {
   const observer = new ResizeObserver(entries => {
     entries.forEach(entry => {
       if (getComputedStyle(hamburger).display === 'none') {
+        // Convert to menu
         dropdownMenu.classList.add('menu');
         dropdownMenu.classList.remove('dropdown');
+        hamburger.classList.remove('is-active');
+        dropdownMenu.classList.remove('is-active');
       } else {
+        // Convert to dropdown
         dropdownMenu.classList.add('dropdown');
         dropdownMenu.classList.remove('menu');
       }
@@ -55,5 +60,11 @@ const checkHamburger = setInterval(function() {
   });
   
   observer.observe(document.body);
+
+  if (!CSS.supports('backdrop-filter', 'blur(10px)')) {
+    // Add a class to the element to use fallback background color
+    document.getElementById('#dropdownMenu').classList.add('no-backdrop-filter');
+  }
+  
 }, 100);
 
