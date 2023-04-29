@@ -20,7 +20,7 @@ async function includeNavbar() {
     // Insert the navbar HTML into the navbar header
     const navbarId = document.getElementById("navbar");
     navbarId.outerHTML = data;
-  }
+}
 
 includeNavbar();
 
@@ -60,11 +60,5 @@ const checkHamburger = setInterval(function() {
   });
   
   observer.observe(document.body);
-
-  if (!CSS.supports('backdrop-filter', 'blur(10px)')) {
-    // Add a class to the element to use fallback background color
-    document.getElementById('#dropdownMenu').classList.add('no-backdrop-filter');
-  }
-  
 }, 100);
 

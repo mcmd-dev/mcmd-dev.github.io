@@ -1,12 +1,5 @@
+@import url('/src/imports/meta.css');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('/src/imports/colours.css');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
 
 body {
   background-color: var(--background-rgba);
@@ -14,7 +7,7 @@ body {
 
 .banner_storage {
   position: relative;
-  height: 100dvh;
+  height: 100svh;
   min-height: 600px;
   display: flex;
   flex-direction: column;
@@ -31,14 +24,13 @@ body {
   -webkit-user-drag: none;
   user-select: none;
   position: absolute;
-  top: 49vh;
+  top: 50vh;
   left: 50vw;
-  transform: translateY(-50%);
   width: 80%;
   max-width: 40em;
   height: auto;
-  opacity: 0;
   filter: hue-rotate(180deg);
+  opacity: 0;
   animation: banner_storage-logo 1s ease-out forwards;
 }
 

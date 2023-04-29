@@ -1,5 +1,5 @@
+@import url('/src/imports/meta.css');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('/src/imports/colours.css');
 
 * {
     margin: 0;
@@ -15,7 +15,7 @@ body {
 
 .error {
     width: 100vw;
-    height: 33vh;
+    height: 33dvh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -108,7 +108,7 @@ body {
 .redirect {
     display: none;
     width: 100vw;
-    height: 100vh;
+    height: 100dvh;
     color: white;
     justify-content: center;
     align-items: center;
@@ -147,10 +147,12 @@ body {
     0% {
       opacity: 0;
       transform: translate(0, 100%);
+      -webkit-transform: translate(0, 100%);
     }
     100% {
       opacity: 1;
       transform: translate(0, 50%);
+      -webkit-transform: translate(0, 50%);
     }
 }
 
@@ -158,10 +160,12 @@ body {
     0% {
       opacity: 0;
       transform: translate(0, 50%);
+      -webkit-transform: translate(0%, 50%);
     }
     100% {
       opacity: 1;
       transform: translate(0, 0%);
+      -webkit-transform: translate(0%, 0%);
     }
 }
 
