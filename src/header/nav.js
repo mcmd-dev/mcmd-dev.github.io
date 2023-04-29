@@ -17,9 +17,9 @@ async function includeNavbar() {
     const response = await fetch(navbarHtml);
     const data = await response.text();
   
-    // Insert the navbar HTML into the navbar div
-    const navbarDiv = document.getElementById("navbar");
-    navbarDiv.innerHTML = data;
+    // Insert the navbar HTML into the navbar header
+    const navbarId = document.getElementById("navbar");
+    navbarId.outerHTML = data;
   }
 
 includeNavbar();

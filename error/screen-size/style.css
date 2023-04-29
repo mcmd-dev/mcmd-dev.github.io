@@ -23,17 +23,87 @@ body {
 
 .error h1 {
     color: white;
+    opacity: 0;
+    animation: transition-in 1s ease-out forwards;
 }
 
 .error p {
     color: white;
+    opacity: 0;
     width: 80%;
     text-align: center;
+    animation: transition-in 1s ease-out forwards;
+    animation-delay: 0.60s;
 }
 
 .error a {
     color: var(--primary_light);
+    opacity: 0;
+    animation: transition-in 1s ease-out forwards;
+    animation-delay: 1.20s;
 }
+
+.lds-grid {
+    display: inline-flex;
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    animation: transition-in-lds 1s ease-out forwards;
+    opacity: 0;
+} 
+.lds-grid span {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #54a9fd;
+    animation: lds-grid 1.2s linear infinite;
+}
+.lds-grid span:nth-child(1) {
+    top: 8px;
+    left: 8px;
+    animation-delay: 0s;
+}
+.lds-grid span:nth-child(2) {
+    top: 8px;
+    left: 32px;
+    animation-delay: -0.4s;
+}
+.lds-grid span:nth-child(3) {
+    top: 8px;
+    left: 56px;
+    animation-delay: -0.8s;
+}
+.lds-grid span:nth-child(4) {
+    top: 32px;
+    left: 8px;
+    animation-delay: -0.4s;
+}
+.lds-grid span:nth-child(5) {
+    top: 32px;
+    left: 32px;
+    animation-delay: -0.8s;
+}
+.lds-grid span:nth-child(6) {
+    top: 32px;
+    left: 56px;
+    animation-delay: -1.2s;
+}
+.lds-grid span:nth-child(7) {
+    top: 56px;
+    left: 8px;
+    animation-delay: -0.8s;
+}
+.lds-grid span:nth-child(8) {
+    top: 56px;
+    left: 32px;
+    animation-delay: -1.2s;
+}
+.lds-grid span:nth-child(9) {
+    top: 56px;
+    left: 56px;
+    animation-delay: -1.6s;
+} 
 
 .redirect {
     display: none;
@@ -42,5 +112,65 @@ body {
     color: white;
     justify-content: center;
     align-items: center;
-    font-size: 2em;
+    flex-direction: column;
 }
+
+.redivrect { /* Yes... re(div)rect (: */
+    height: 33vh;
+    width: 100vw;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.redirect h1 {
+    opacity: 0;
+    animation: transition-in 1s ease-out forwards;
+}
+
+.redirect p {
+    width: 80%;
+    text-align: center;
+    opacity: 0;
+    animation: transition-in 1s ease-out forwards;
+}
+
+.redirect .buffer {
+    display: flex;
+    opacity: 0;
+    animation: transition-in 1s ease-out forwards;
+}
+
+@keyframes transition-in {
+    0% {
+      opacity: 0;
+      transform: translate(0, 100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(0, 50%);
+    }
+}
+
+@keyframes transition-in-lds {
+    0% {
+      opacity: 0;
+      transform: translate(0, 50%);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(0, 0%);
+    }
+}
+
+
+@keyframes lds-grid {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+  }

@@ -43,12 +43,10 @@ body {
 }
 
 .banner_storage p {
-  overflow: hidden;
   position: absolute;
-  top: 71vh;
-  left: 50vw;
+  top: 71%;
+  width: 80vw;
   padding-top: 75px;
-  width: calc(80vw - 20px);
   text-align: center;
   font-family: 'Poppins';
   font-style: italic;
@@ -73,11 +71,11 @@ body {
 @keyframes banner_storage-p {
   0% {
     opacity: 0;
-    transform: translate(-50%, -30%);
+    transform: translate(0, -30%);
   }
   100% {
     opacity: 1;
-    transform: translate(-50%, -50%);
+    transform: translate(0, -50%);
   }
 } 
 
