@@ -9,7 +9,7 @@ function redirectUser(prevUrl) {
         const redirectText = document.querySelector('.redirect');
         redirectText.style.display = 'flex';
         setTimeout(function() {
-            window.location.href = prevUrl;
+            window.location.replace(prevUrl);
         }, 2000);
 }
 

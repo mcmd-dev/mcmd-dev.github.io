@@ -24,8 +24,8 @@ body {
   -webkit-user-drag: none;
   user-select: none;
   position: absolute;
-  top: 50vh;
-  left: 50vw;
+  top: 50%;
+  left: 50%;
   width: 80%;
   max-width: 40em;
   height: auto;
